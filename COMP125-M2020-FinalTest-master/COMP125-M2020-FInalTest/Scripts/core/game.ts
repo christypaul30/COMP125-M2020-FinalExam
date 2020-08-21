@@ -113,12 +113,15 @@ let Game = (function(){
         stage = new createjs.Stage(canvas);
         stage.enableMouseOver(20);
 
+        //rolling random value 1
         let temp=Util.Mathf.RandomRange(1,6);
         rollLeft=Math.floor(temp).toString();
 
+        //rolling random value 2
         temp=Util.Mathf.RandomRange(1,6);
         rollRight=Math.floor(temp).toString();
 
+        //moving labels left and right
         exampleLabelLeft = new UIObjects.Label(rollLeft, "40px", "Consolas", "#000000", Config.Game.CENTER_X-100, 
         Config.Game.CENTER_Y, true);
         stage.addChild(exampleLabelLeft);
