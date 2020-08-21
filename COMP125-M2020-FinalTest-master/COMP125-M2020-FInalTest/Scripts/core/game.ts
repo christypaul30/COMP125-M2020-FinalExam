@@ -100,9 +100,7 @@ let Game = (function(){
         exampleButton = new UIObjects.Button("rollbutton", Config.Game.CENTER_X, Config.Game.CENTER_Y + 100, true);
         stage.addChild(exampleButton);
 
-        exampleButton.on("click", ()=>{
-            //roll dice
-            rollEvent();
+        
         });
     }
 
