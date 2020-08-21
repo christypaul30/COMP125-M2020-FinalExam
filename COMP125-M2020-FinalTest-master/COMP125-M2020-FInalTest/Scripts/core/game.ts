@@ -106,7 +106,14 @@ let Game = (function(){
         });
     }
 
-    
+    function rollEvent():void{
+
+        stage.clear();
+        stage = new createjs.Stage(canvas);
+        stage.enableMouseOver(20);
+
+        let temp=Util
+    }
 
     window.addEventListener('load', Preload);
 
