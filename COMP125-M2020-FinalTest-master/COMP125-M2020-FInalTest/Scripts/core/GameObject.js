@@ -1,5 +1,18 @@
 "use strict";
-var Core;
+let __extends = (this && this.__extends) || (function () {
+    let extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (let p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+let Core;
 (function (Core) {
     class GameObject extends createjs.Bitmap {
         // CONSTRUCTOR
