@@ -11,6 +11,8 @@ let Game = (function(){
     let exampleButton: UIObjects.Button;
     
     //ID of images left and right
+    let rollLeft:string ;
+    let rollRight:string ;
 
     let assetManifest = 
     [
@@ -75,6 +77,12 @@ let Game = (function(){
     {
         console.log(`%c Main Function`, "color: grey; font-size: 14px; font-weight: bold;");
 
+        let temp = Util.Mathf.RandomRange(1,6);
+        rollLeft=Math.floor(temp).toString();
+
+        let temp = Util.Mathf.RandomRange(1,6);
+        rollLeft=Math.floor(temp).toString();
+        
         exampleLabel = new UIObjects.Label("An Example Label", "40px", "Consolas", "#000000", Config.Game.CENTER_X, Config.Game.CENTER_Y, true);
         stage.addChild(exampleLabel);
 
