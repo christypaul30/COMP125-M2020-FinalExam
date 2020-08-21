@@ -36,7 +36,7 @@ let Core;
             this.height = this.getBounds().height;
             this.isCentered = centered;
             this.position = new Util.Vector2(x, y, this);
-            return_this;
+            return _this;
         }
         Object.defineProperty(GameObject.prototype, "width", {
             // PUBLIC PROPERTIES
