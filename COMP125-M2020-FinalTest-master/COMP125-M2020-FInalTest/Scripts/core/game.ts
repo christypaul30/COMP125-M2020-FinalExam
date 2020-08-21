@@ -106,6 +106,7 @@ let Game = (function(){
         });
     }
 
+    //rolling event sets, images and labels
     function rollEvent():void{
 
         stage.clear();
@@ -116,9 +117,23 @@ let Game = (function(){
         rollLeft=Math.floor(temp).toString();
 
         temp=Util.Mathf.RandomRange(1,6);
-        rollLeft=Math.floor(temp).toString();
+        rollRight=Math.floor(temp).toString();
 
+        exampleLabelLeft = new UIObjects.Label(rollLeft, "40px", "Consolas", "#000000", Config.Game.CENTER_X-100, 
+        Config.Game.CENTER_Y, true);
+        stage.addChild(exampleLabelLeft);
 
+        exampleLabelRight = new UIObjects.Label(rollRight, "40px", "Consolas", "#000000", Config.Game.CENTER_X+100, 
+        Config.Game.CENTER_Y, true);
+        stage.addChild(exampleLabelRight);
+
+        //drawing images left and right
+        stage.addChild(new Core.GameObject(rollLeft, Config.Game.CENTER_X-100,Config.Game.CENTER_Y-120,true));
+        stage.addChild(new Core.GameObject(rollRight, Config.Game.CENTER_X+100,Config.Game.CENTER_Y-120,true));
+
+        //roll button
+        exampleButton = new UIObjects.Button("rollbutton", Config.Game.CENTER_X, Config.Game.CENTER_Y + 100, true);
+        stage.addChild(exampleButton);
     }
 
     window.addEventListener('load', Preload);
