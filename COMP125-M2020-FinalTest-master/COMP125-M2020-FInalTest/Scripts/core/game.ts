@@ -6,8 +6,11 @@ let Game = (function(){
     
     let assets: createjs.LoadQueue;
 
-    let exampleLabel: UIObjects.Label;
-    let exampleButton: UIObjects.Button;    
+    let exampleLabelLeft: UIObjects.Label;
+    let exampleLabelRight: UIObjects.Label;
+    let exampleButton: UIObjects.Button;
+    
+    //ID of images left and right
 
     let assetManifest = 
     [
