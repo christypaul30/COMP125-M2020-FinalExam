@@ -112,7 +112,13 @@ let Game = (function(){
         stage = new createjs.Stage(canvas);
         stage.enableMouseOver(20);
 
-        let temp=Util
+        let temp=Util.Mathf.RandomRange(1,6);
+        rollLeft=Math.floor(temp).toString();
+
+        temp=Util.Mathf.RandomRange(1,6);
+        rollLeft=Math.floor(temp).toString();
+
+
     }
 
     window.addEventListener('load', Preload);
