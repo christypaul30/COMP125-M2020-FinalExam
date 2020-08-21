@@ -1,0 +1,31 @@
+body
+{
+    background-color: lightgray;
+}
+
+#canvas
+{
+    background-color: white;
+    border: 1px dotted black;
+    border-radius: 10px;
+}
+
+#mainContent
+{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.butn { 
+    background: #4ecca3; 
+    font-family: "Indie Flower", cursive; 
+    border-radius: 7px; 
+    color: #ffff; 
+    font-size: 30px; 
+    padding: 16px 25px 16px 25px; 
+    text-decoration: none; 
+} 
+
+.butn:hover { 
+    background: #232931; 
+    text-decoration: none; }
