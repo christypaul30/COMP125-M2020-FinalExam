@@ -81,10 +81,16 @@ let Game = (function(){
         rollLeft=Math.floor(temp).toString();
 
         let temp = Util.Mathf.RandomRange(1,6);
-        rollLeft=Math.floor(temp).toString();
-        
-        exampleLabel = new UIObjects.Label("An Example Label", "40px", "Consolas", "#000000", Config.Game.CENTER_X, Config.Game.CENTER_Y, true);
-        stage.addChild(exampleLabel);
+        rollRight=Math.floor(temp).toString();
+
+                //moving label left
+        exampleLabelLeft = new UIObjects.Label("An Example Label", "40px", "Consolas", "#000000", Config.Game.CENTER_X-100, 
+        Config.Game.CENTER_Y, true);
+        stage.addChild(exampleLabelLeft);
+
+        exampleLabelRight = new UIObjects.Label("An Example Label", "40px", "Consolas", "#000000", Config.Game.CENTER_X+100, 
+        Config.Game.CENTER_Y, true);
+        stage.addChild(exampleLabelLeft);
 
         exampleButton = new UIObjects.Button("button", Config.Game.CENTER_X, Config.Game.CENTER_Y + 100, true);
         stage.addChild(exampleButton);
