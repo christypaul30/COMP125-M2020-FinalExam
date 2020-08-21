@@ -80,7 +80,7 @@ let Game = (function(){
         let temp = Util.Mathf.RandomRange(1,6);
         rollLeft=Math.floor(temp).toString();
 
-        let temp = Util.Mathf.RandomRange(1,6);
+        temp = Util.Mathf.RandomRange(1,6);
         rollRight=Math.floor(temp).toString();
 
         //moving label left and right
@@ -92,15 +92,21 @@ let Game = (function(){
         Config.Game.CENTER_Y, true);
         stage.addChild(exampleLabelRight);
 
+        //drawing images left and right
         stage.addChild(new Core.GameObject(rollLeft, Config.Game.CENTER_X-100,Config.Game.CENTER_Y-120,true));
+        stage.addChild(new Core.GameObject(rollRight, Config.Game.CENTER_X+100,Config.Game.CENTER_Y-120,true));
 
-        exampleButton = new UIObjects.Button("button", Config.Game.CENTER_X, Config.Game.CENTER_Y + 100, true);
+        //roll button
+        exampleButton = new UIObjects.Button("rollbutton", Config.Game.CENTER_X, Config.Game.CENTER_Y + 100, true);
         stage.addChild(exampleButton);
 
         exampleButton.on("click", ()=>{
-            console.log("example button clicked");
+            //roll dice
+            rollEvent();
         });
     }
+
+    
 
     window.addEventListener('load', Preload);
 
