@@ -124,14 +124,15 @@ let Core;
         GameObject.prototype._computeHalfWidth = function () {
             return this.width * 0.5;
         };
-        _computeHalfHeight() {
+        GameObject.prototype._computeHalfHeight = function (){
             return this.height * 0.5;
         }
-        _centerGameObject() {
+        GameObject.prototype._centerGameObject = function () {
             this.regX = this.halfWidth;
             this.regY = this.halfHeight;
-        }
-    }
+        };
+        return GameObject;
+    } (create.js.Bitmap));
     Core.GameObject = GameObject;
 })(Core || (Core = {}));
 //# sourceMappingURL=GameObject.js.map
